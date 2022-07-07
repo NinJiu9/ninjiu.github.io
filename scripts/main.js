@@ -7,10 +7,10 @@ let myImage= document.querySelector('img');
 
 myImage.onclick=function(){
 	let mySrc=myImage.getAttribute('src');
-	if(mySrc==='img/学习笔记.png'){
-		myImage.setAttribute('src','img/2.jpg');
+	if(mySrc==='img/雪糕.png'){
+		myImage.setAttribute('src','img/寿司.png');
 	}else{
-		myImage.setAttribute('src','img/学习笔记.png');
+		myImage.setAttribute('src','img/雪糕.png');
 	}
 	
 }
@@ -24,7 +24,7 @@ function setUserName(){
 		setUserName();
 	}else{
 		localStorage.setItem('name',myName);
-		myHeading.textContent='Mozilla,'+myName;
+		myHeading.textContent='你好呀！'+myName;
 	}
 	//localStorage.setItem('name',myName);
 	//myHeading.textContent='Mozilla,'+myName;
