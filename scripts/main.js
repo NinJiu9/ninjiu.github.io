@@ -39,7 +39,7 @@ if(!localStorage.getItem('name')){
 	setUseName();
 }else{
 	let storedName=localStorage.getItem('name');
-	myHeading.textContent='Mozilla,'+storedName;
+	myHeading.textContent='你好呀！,'+storedName;
 }
 
 
