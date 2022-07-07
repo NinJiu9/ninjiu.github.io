@@ -7,10 +7,10 @@ let myImage= document.querySelector('img');
 
 myImage.onclick=function(){
 	let mySrc=myImage.getAttribute('src');
-	if(mySrc==='img/1.jpg'){
+	if(mySrc==='img/学习笔记.png'){
 		myImage.setAttribute('src','img/2.jpg');
 	}else{
-		myImage.setAttribute('src','img/1.jpg');
+		myImage.setAttribute('src','img/学习笔记.png');
 	}
 	
 }
