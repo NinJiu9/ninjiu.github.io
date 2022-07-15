@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子模型</title>
+		<style>
+			#d1{
+			width: 100px;
+			height: 100px;
+			background-color: aqua;
+			/* 设置边框 */
+			border:#48466d 8px outset;
+			/* 设置内边距 */
+			/* padding:15px; */
+			/* padding-left:20px; */
+			padding: 10px 40px;
+			/* 设置外边距 */
+			/* margin:10px 20px; */
+			margin-top:50px;
+		}
+			
+		</style>
+		
+	</head>
+	<body>
+		<!-- 
+			盒子模型
+				padding	内边距
+				border	边框
+				margin	外边距
+				
+				border
+					设置边框的颜色，样式，宽度
+						border:颜色 样式 宽度
+							例：border:red soild 1px;
+					单独设置边框的宽度，样式，颜色
+						border-width
+						border-style
+						border-color
+					border-collapse
+						设置是否将表格边框折叠为单一边框
+						属性值：separate(默认，单元格边框独立)、collapse(单元格边框合并)
+				
+				padding
+					设置元素所有编剧的宽度，或者设置各边上内边距的宽度
+					单独设置各边的内边距：padding-top,padding-left,padding-bottom,padding-right
+					默认按照上右下左的顺序设定
+					
+					设置一个值：上右下左都一样
+					设置两个值：上下一致，左右一致
+					设置三个值：上右下，左和右一致
+				
+				margin
+					设置一个元素所有外边距的宽度，或者生物质各边上外边距的宽度
+					单独设置各边的内边距：margin-top,margin-left,margin-bottom,margin-right
+		 -->
+		<div id="d1"></div>
+	</body>
+</html>

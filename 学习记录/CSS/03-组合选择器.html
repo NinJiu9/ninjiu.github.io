@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组合选择器</title>
+		<style type="text/css">
+			/* 后代选择器 */
+			#food li{
+				border: #3fc1c9 solid 1px;
+			}
+			/* 子代选择器 */
+			.food2 > li{
+				border:#f08a5d dotted 2px ;
+			}
+			/* 相邻兄弟选择器 */
+			#mydiv + div{
+				background-color: #ffcfdf;
+			}
+			/* 普通兄弟选择器 */
+			#mydiv2 ~ div{
+				background-color: #f08a5d;
+			}
+			
+		</style>
+	</head>
+	<body>
+		 <!-- 
+			组合选择器
+				后代选择器
+					选择指定元素的所有指定后代元素，以空格隔开
+					选择器 指定元素{
+						属性名:属性值;
+						...
+					}
+				自带选择器
+					选择指定元素的第一代子元素，以大于号>隔开
+					选择器 > 指定元素{
+						属性名:属性值;
+						...
+					}
+				相邻兄弟选择器
+					选择指定元素的下一个指定元素，两者有相同的父元，以+号隔开
+					选择器 + 指定元素{
+						属性名:属性值;
+						...
+					}
+					注：只会找一个
+				普通兄弟选择器
+					选择指定元素后面的所有指定元素，两者有相同的父元素，以~号隔开
+					选择器 + 指定元素{
+						属性名:属性值;
+						...
+					}
+					注：可以用类选择器或者id选择器
+		  -->
+		  <!-- 获取class属性值是food的元素的所有对应li的列表项 -->
+		   
+		<ul>
+			<li>水果
+				<ul>
+					<li>香蕉</li>
+					<li>苹果</li>
+					<li>梨</li>
+				</ul>
+			</li>
+			<br>
+			<li>蔬菜
+				<ul>
+					<li>白菜</li>
+					<li>包菜</li>
+					<li>卷心菜</li>
+				</ul>
+			</li>
+		</ul>
+		<hr>
+		<ul id="food">
+			<li>水果
+				<ul>
+					<li>香蕉</li>
+					<li>苹果</li>
+					<li>梨</li>
+				</ul>
+			</li>
+			<br>
+			<li>蔬菜
+				<ul>
+					<li>白菜</li>
+					<li>包菜</li>
+					<li>卷心菜</li>
+				</ul>
+			</li>
+		</ul>
+		<hr>
+		<ul class="food2">
+			<li>水果
+				<ul>
+					<li>香蕉</li>
+					<li>苹果</li>
+					<li>梨</li>
+				</ul>
+			</li>
+			<br>
+			<li>蔬菜
+				<ul>
+					<li>白菜</li>
+					<li>包菜</li>
+					<li>卷心菜</li>
+				</ul>
+			</li>
+		</ul>
+		<hr>
+		<div>相邻兄弟选择器1</div>
+		<div id="mydiv">相邻兄弟选择器2</div>
+		<!-- <p>test</p> -->
+		<div>相邻兄弟选择器3</div>
+		<div>相邻兄弟选择器4</div>
+		<hr>
+		<div>普通兄弟选择器1</div>
+		<div id="mydiv2">普通兄弟选择器2</div>
+		<div>普通兄弟选择器3</div>
+		<div>普通兄弟选择器4</div>
+		
+	</body>
+</html>
