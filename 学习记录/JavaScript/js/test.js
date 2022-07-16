@@ -1,0 +1,1 @@
+console.log("外部JS的提示");
