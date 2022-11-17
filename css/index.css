@@ -1,0 +1,267 @@
+.top {
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(to bottom, rgb(24, 16, 61), rgb(31, 16, 25)); */
+    position: absolute;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.top img {
+    width: 100%;
+    height: 100%;
+}
+
+.top .word {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top .word h2 {
+    font: 100 70px 'font';
+    color: #fff;
+    letter-spacing: 10px;
+}
+
+
+
+.main {
+    width: 100%;
+    height: auto;
+    top: 100vh;
+    position: relative;
+    transition: .2s;
+    display: flex;
+    /* 将元素垂直展示 */
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; 导致子元素sticky定位失效*/
+    margin-bottom: 100px;
+}
+
+.main::before {
+    content: '';
+    width: 250px;
+    height: 50%;
+    background-image: linear-gradient(to bottom, #a1e6ff, #a8ffe2, #a1e6ff);
+    position: absolute;
+    transform: translate(-145%, 0);
+    z-index: -999;
+    bottom: 0;
+    background-color: #178b15;
+}
+
+.main::after {
+    content: '';
+    width: 250px;
+    height: 50%;
+    background-image: linear-gradient(to bottom, #a1e6ff, #a8ffe2, #a1e6ff);
+    position: absolute;
+    transform: translate(145%, 0);
+    z-index: -999;
+    background-color: #cc5595;
+}
+
+.main-nav {
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 18vh;
+    /* 左上到右下渐变色 */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(13px);
+}
+
+
+.logo {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 2%;
+    /* 均匀排列每个元素 首个元素放置于起点，末尾元素放置于终点 */
+    justify-content: space-between;
+    display: flex;
+    /* 在单行情况下， align-items:center; 使元素居中,在交叉轴上居中对齐。 */
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font: 100 20px 'font';
+    letter-spacing: 2px;
+}
+
+.main-nav ul {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    /* 均匀排列每个元素 每个元素之间的间隔相等 */
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 2%;
+}
+
+/* 移动小滑块 */
+.main-nav ul .nav-box {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 115px;
+    height: 5px;
+    border-radius: 10px;
+    z-index: -999;
+    transition: .35s;
+}
+
+.main-nav ul li {
+    width: 150px;
+    text-align: center;
+}
+
+.main-nav ul li a {
+    color: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* 用：‘～’ 控制就近元素 */
+.main-nav ul li:nth-child(1):hover~.nav-box {
+    left: calc(100% /6 *0);
+    background-color: #d276a3;
+}
+
+.main-nav ul li:nth-child(2):hover~.nav-box {
+    left: calc(100% /6 *1);
+    background-color: #c06f98;
+}
+
+.main-nav ul li:nth-child(3):hover~.nav-box {
+    left: calc(100% /6 *2);
+    background-color: #cc5595;
+}
+
+.main-nav ul li:nth-child(4):hover~.nav-box {
+    left: calc(100% /6 *3);
+    background-color: #c35691;
+}
+
+.main-nav ul li:nth-child(5):hover~.nav-box {
+    left: calc(100% /6 *4);
+    background-color: #ba2f7b;
+}
+
+.main-nav ul li:nth-child(6):hover~.nav-box {
+    left: calc(100% /6 *5);
+    background-color: #9b1e64;
+}
+
+.main-lunbotu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /* 居中排列 */
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    margin-bottom: 150px;
+    overflow: hidden;
+    background-image: url("../img/lbt.gif");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+}
+
+.main-lunbotu .images {
+    width: 300%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.main-lunbotu .images .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.button {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    /* 均匀排列每个元素首个元素放置于起点，末尾元素放置于终点 */
+    justify-content: space-between;
+    user-select: none;
+}
+
+.button .button-left,
+.button-right {
+    font-size: 50px;
+    background-color: rgb(144, 182, 252);
+    padding: 0 20px;
+    /* 指针样式 */
+    cursor: pointer;
+    line-height: 500px;
+}
+.button .button-left:hover,.button-right:hover{
+    background-color: rgba(160, 193, 255, 0.9);
+}
+.main-end {
+    width: 100%;
+    height:400px;
+    position: relative;
+    background-color: rgb(193, 187, 187);
+}
+
+.main-end .word{
+    position:absolute;
+    left:50%;
+    bottom:20%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 150px;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(113, 107, 107);
+}
+.main-end .word h2{
+    color: #353232e8;
+    font: 100 30px 'font';
+    letter-spacing: 8px;
+}
+
+.main-end .word a{
+    color: rgb(181, 175, 175);
+    letter-spacing: 10px;
+}

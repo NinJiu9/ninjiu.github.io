@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'font';
+    src: url("../font/优设标题黑_猫啃网.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.shell {
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

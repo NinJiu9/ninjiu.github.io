@@ -1,0 +1,108 @@
+.iconfont {
+    font-size: 26px !important;
+    color: #797a7b;
+    line-height: 50px;
+    text-align: center;
+}
+
+.menu-box {
+    position: sticky;
+    width: 50px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+    /* 添加过度 */
+    transition: all .2s ease-out;
+    overflow: hidden;
+    background-color: #ececec;
+}
+
+.menu-box:hover{
+    width:90px;
+    border-radius:60px;
+}
+
+.menu-box:hover>ul>li p{
+    display:block;
+}
+
+.emotion-box{
+    width:100%;
+    text-align:center;
+    margin:10px auto;
+}
+#emotion1,
+#emotion2{
+    color:rgba(149, 65, 87, 0.992);
+    font-size:32px !important;
+    animation:jitter .8s linear forwards;
+
+}
+
+#emotion2{
+    display:none;
+}
+
+.menu-box:hover #emotion1{
+    display:none;
+}
+
+.menu-box:hover #emotion2{
+    display:block;
+}
+
+.main-cebianlan ul{
+    width:100%;
+    height:75%;
+}
+
+.main-cebianlan li{
+    list-style:none;
+}
+
+/* 选择li子级目录下的a链接字体 */
+.main-cebianlan li>a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:20%;
+    text-decoration:none;
+    user-select:none;
+}
+
+.main-cebianlan li:hover{
+    background-color:rgb(149, 237, 251);
+    cursor:pointer;
+}
+
+.main-cebianlan li:hover .content,
+.main-cebianlan li:hover i{
+    color:rgb(48, 22, 27);
+}
+
+.main-cebianlan li:hover i{
+    animation:jitter .3s linear forwards;
+}
+
+.main-cebianlan .content{
+    display:none;
+    padding-left:5px;
+    color:#797a7b;
+
+    white-space:nowrap;
+    transition:all .2s ease-out;
+}
+
+@keyframes jitter{
+    0%{
+        transform:scale(1.2) rotate(10deg);
+    }
+    50%{
+        transform:scale(0.8) rotate(-10deg);
+    }
+    0%{
+        transform:scale(1.0) rotate(0deg);
+    }
+
+}

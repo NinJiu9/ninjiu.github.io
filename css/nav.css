@@ -1,0 +1,105 @@
+.main-nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 18vh;
+    /* 左上到右下渐变色 */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(13px);
+    display: block;
+}
+
+
+.logo {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 2%;
+    /* 均匀排列每个元素 首个元素放置于起点，末尾元素放置于终点 */
+    justify-content: space-between;
+    display: flex;
+    /* 在单行情况下， align-items:center; 使元素居中,在交叉轴上居中对齐。 */
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font: 100 20px 'font';
+    letter-spacing: 2px;
+}
+
+.main-nav ul {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    /* 均匀排列每个元素 每个元素之间的间隔相等 */
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 2%;
+}
+
+/* 移动小滑块 */
+.main-nav ul .nav-box {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 115px;
+    height: 5px;
+    border-radius: 10px;
+    z-index: -999;
+    transition: .35s;
+}
+
+.main-nav ul li {
+    width: 150px;
+    text-align: center;
+}
+
+.main-nav ul li a {
+    color: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* 用：‘～’ 控制就近元素 */
+.main-nav ul li:nth-child(1):hover~.nav-box {
+    left: calc(100% /6 *0);
+    background-color: #d276a3;
+}
+
+.main-nav ul li:nth-child(2):hover~.nav-box {
+    left: calc(100% /6 *1);
+    background-color: #c06f98;
+}
+
+.main-nav ul li:nth-child(3):hover~.nav-box {
+    left: calc(100% /6 *2);
+    background-color: #cc5595;
+}
+
+.main-nav ul li:nth-child(4):hover~.nav-box {
+    left: calc(100% /6 *3);
+    background-color: #c35691;
+}
+
+.main-nav ul li:nth-child(5):hover~.nav-box {
+    left: calc(100% /6 *4);
+    background-color: #ba2f7b;
+}
+
+.main-nav ul li:nth-child(6):hover~.nav-box {
+    left: calc(100% /6 *5);
+    background-color: #9b1e64;
+}
